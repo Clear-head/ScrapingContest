@@ -12,7 +12,7 @@
 * **스크래핑 진행 상황 모니터링**: 데이터 수집이 진행 중일 때 사용자에게 진행 상태를 시각적으로 보여주는 페이지(`scraping.html`)를 제공.
 
 ## 시스템 아키텍처
-![시스템아키텍처](src/resources/SystemArchitecture.png)
+![시스템아키텍처](src/resources/Scrap_arch.png)
 
 ## 사용 기술 스택
 | 구분 | 기술 스택 | 설명 |
