@@ -65,6 +65,15 @@ async def scraping_page(request: Request):
     })
 
 
+@app.get("/api/scraping-status")
+async def get_scraping_status(request: Request):
+    cursor = user_connection.UserConn()
+    status = cursor.get_scraping_status()
+    if not status["is_running"] and status["progress"] == 100:
+        return RedirectResponse("/")
+    return status
+
+
 @app.get("/false")
 def fail_load(request: Request):
     return templates.TemplateResponse("fail_load.html", {"request":request})
